@@ -5,3 +5,5 @@
 配置服务注册中心
 
 Centos上Redis安装：https://linux.cn/article-6719-1.html
+
+I'll try anything once...
