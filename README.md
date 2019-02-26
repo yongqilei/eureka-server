@@ -4,4 +4,4 @@
 
 配置服务注册中心
 
-日语学习：https://jp.sonic-learning.com/
+Centos上Redis安装：https://linux.cn/article-6719-1.html
