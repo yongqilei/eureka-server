@@ -1,0 +1,19 @@
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+      - id: route_service_user
+        uri: lb://SERVICE-USER
+        predicates:
+        - Path=/user/**
+  application:
+    name: gateway-client
+server:
+  port: 8082
+eureka:
+  client:
+    servers-url:
+      default-zone: http://localhost:8761/eureka
