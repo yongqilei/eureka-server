@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>com.movie.pncinema</groupId>
 		<artifactId>servers-parent</artifactId>
-		<version>0.0.1-SNAPSHOT</version>
+		<version>${server.version}</version>
 	</parent>
 	<artifactId>eureka-server</artifactId>
 
@@ -16,4 +16,12 @@
 		</dependency>
 	</dependencies>
 
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
 </project>
