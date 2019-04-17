@@ -14,6 +14,8 @@ import org.springframework.web.reactive.function.server.RouterFunction;
 import org.springframework.web.reactive.function.server.RouterFunctions;
 import org.springframework.web.reactive.function.server.ServerRequest;
 import org.springframework.web.reactive.function.server.ServerResponse;
+import org.springframework.web.server.ServerWebExchange;
+import reactor.core.publisher.Mono;
 
 /**
  * 自定义异常处理
@@ -50,6 +52,11 @@ public class JsonExceptionHandler extends DefaultErrorWebExceptionHandler {
     @Override
     protected RouterFunction<ServerResponse> getRoutingFunction(ErrorAttributes errorAttributes) {
         return RouterFunctions.route(RequestPredicates.all(), this::renderErrorResponse);
+    }
+
+    @Override
+    public Mono<Void> handle(ServerWebExchange exchange, Throwable throwable) {
+        return super.handle(exchange, throwable);
     }
 
     /**
