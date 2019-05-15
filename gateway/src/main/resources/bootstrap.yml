@@ -12,8 +12,13 @@ spring:
   application:
     name: gateway-client
 server:
-  port: 8082
+  port: 8901
 eureka:
   client:
-    servers-url:
-      default-zone: http://localhost:8761/eureka
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://eureka:123456@localhost:8761/eureka
+  instance:
+    hostname: localhost
+

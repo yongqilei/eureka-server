@@ -22,7 +22,7 @@ import reactor.core.publisher.Mono;
  *
  * <p>异常时用JSON代替HTML异常信息<p>
  *
- * @author yinjihuan
+ * @author songyingzhe
  *
  */
 public class JsonExceptionHandler extends DefaultErrorWebExceptionHandler {
@@ -95,7 +95,7 @@ public class JsonExceptionHandler extends DefaultErrorWebExceptionHandler {
      * @return
      */
     public static Map<String, Object> response(int status, String errorMessage) {
-        Map<String, Object> map = new HashMap<>();
+        Map<String, Object> map = new HashMap<>(3);
         map.put("code", status);
         map.put("message", errorMessage);
         map.put("data", null);
