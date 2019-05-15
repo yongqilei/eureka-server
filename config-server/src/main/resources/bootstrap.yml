@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri:
+          search-paths: config
+          username: rayyq
+          password: leiyongqi1026
+server:
+  port: 7001
